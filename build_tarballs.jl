@@ -3,7 +3,7 @@
 using BinaryBuilder
 
 name = "GoogleCodeSearchBuilder"
-version = v"0.1.1"
+version = v"0.1.2"
 
 # Collection of sources required to build GoogleCodeSearchBuilder
 sources = [
@@ -33,8 +33,9 @@ export PATH="/usr/local/go/bin:$PATH"
 go version
 /usr/local/go/bin/go get github.com/google/codesearch/cmd/csearch
 /usr/local/go/bin/go get github.com/google/codesearch/cmd/cindex
-cp /go/bin/cindex $prefix
-cp /go/bin/csearch $prefix
+mkdir -p $prefix/bin
+cp /go/bin/cindex $prefix/bin/cindex
+cp /go/bin/csearch $prefix/bin/csearch
 exit
 
 """
